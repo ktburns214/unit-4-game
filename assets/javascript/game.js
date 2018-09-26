@@ -6,10 +6,7 @@ var targetNumber = 0;
 
 for (var i = 0; i < 4; i++) {
 
-    var imageCrystal = $("<img>");
-
-    imageCrystal.addClass("crystals");
-    imageCrystal.addClass("crystals"+i);
+    var imageCrystal = $(".crystals");
 
     imageCrystal.attr("src", "assets/images/crystal"+i+".png");
 
@@ -25,10 +22,10 @@ function gameSetup() {
     currentScore = 0;
     $("#current-score").text(currentScore);
 
-
+    var imageCrystal = $(".crystal-image");
+    console.log(imageCrystal);
     for (var i = 0; i < 4; i++) {
-        var imageCrystal = $(".crystal"+i);
-        imageCrystal.attr("data-crystalvalue", Math.floor(Math.random() * (12 - 1) + 1));
+        $(imageCrystal[i]).attr("data-crystalvalue", Math.floor(Math.random() * (12 - 1) + 1));
     }
 }
 
