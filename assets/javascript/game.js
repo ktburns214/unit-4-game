@@ -8,8 +8,8 @@ for (var i = 0; i < 4; i++) {
 
     var imageCrystal = $("<img>");
 
-    imageCrystal.addClass("crystal-image");
-    imageCrystal.addClass("crystal"+i);
+    imageCrystal.addClass("crystals");
+    imageCrystal.addClass("crystals"+i);
 
     imageCrystal.attr("src", "assets/images/crystal"+i+".png");
 
@@ -54,4 +54,4 @@ $(".crystal-image").on("click", function () {
         gameSetup();
     }
 
-});
+})
